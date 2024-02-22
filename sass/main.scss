@@ -1,0 +1,142 @@
+@import 'base';
+@import 'variables';
+
+body {
+  background-color: $primary-200;
+  padding: 2rem 1rem;
+}
+
+main {
+  background-color: $neutral-100;
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: .7em;
+  border-bottom-right-radius: .7em;
+}
+
+@media (min-width: 1440px) {
+  main {
+    flex-direction: row;
+  }
+}
+
+.product-img {
+  width: 100%;
+  border-top-left-radius: .7em;
+  border-top-right-radius: .7em;
+}
+
+
+
+.info-container {
+  padding: 1rem 1.5rem;
+  
+  h2 {
+    font-size: 2rem;
+    color: $neutral-700;
+    max-width: 16ch;
+    line-height: 1em;
+    font-family: 'Fraunces';
+    margin-bottom: .5em;
+  }
+  
+  p {
+    color: $neutral-600;
+    font-family: 'Montserrat';
+    font-size: .7rem;
+    margin-bottom: 1em;
+  }
+
+  .product-desc {
+    font-size: .9rem;
+    line-height: 1.5em;
+  }
+}
+
+.price-container {
+  margin-top: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  margin-bottom: 1em;
+  .curr-price {
+    color: $primary-700;
+    font-family: 'Fraunces';
+    font-size: 2rem;
+  }
+  .og-price {
+    font-family: Montserrat;
+    text-decoration: line-through;
+    color: $primary-700;
+  }
+}
+
+.add-to-cart {
+  background-color: $primary-700;
+  border: none;
+  color: $primary-200;
+  width: 100%;
+  padding: 1rem;
+  border-radius: .7em;
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+
+.cart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+@media (min-width: 1440px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .product-img {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: .7em;
+    width: 300px;
+  }
+  
+  main {
+    width: min(50%, 38em);
+    min-height: 50%;
+    border-top-right-radius: .7em;
+    border-bottom-right-radius: .7em;
+  }
+
+  .info-container {
+    padding: 2rem;
+    
+    h2 {
+      font-size: 2rem;
+      color: $neutral-700;
+      max-width: 16ch;
+      line-height: 1em;
+      font-family: 'Fraunces';
+      margin-bottom: .8em;
+      max-width: 9ch;
+    }
+    
+    p {
+      color: $neutral-600;
+      font-family: 'Montserrat';
+      font-size: .7rem;
+      margin-bottom: 1em;
+    }
+  
+    .product-desc {
+      font-size: .9rem;
+      line-height: 1.5em;
+      max-width: 30ch;
+    }
+  }
+  .price-container {
+    margin-bottom: 2em;
+  }
+}
